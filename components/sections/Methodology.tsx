@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Fragment } from "react";
+import SolutionsCarousel from "./SolutionsCarousel";
 
 const IMG = "/images/methodology";
 
@@ -8,8 +9,6 @@ const STEP_BG =
   "linear-gradient(-33.914deg, rgba(20,123,254,0.2) 2.4415%, rgba(0,0,0,0.2) 73.352%), linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 100%)";
 const BENEFIT_BG =
   "linear-gradient(-11.4959deg, rgba(20,123,254,0.2) 2.4415%, rgba(0,0,0,0.2) 73.352%), linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 100%)";
-const SOLUTIONS_BG =
-  "linear-gradient(-14.0061deg, rgba(20,123,254,0.2) 2.4415%, rgba(0,0,0,0.2) 73.352%), linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 100%)";
 const EDGE_SCRIM =
   "linear-gradient(180.053deg, rgba(0,0,0,0) 4.6386%, rgb(0,0,0) 87.545%)";
 
@@ -247,92 +246,6 @@ function TwincoEdge() {
   );
 }
 
-/* "Solutions Content" carousel instance (Figma node 123:1558). */
-function SolutionsContent() {
-  return (
-    <div
-      className="flex w-full flex-col items-start overflow-hidden rounded-card p-[24px]"
-      style={{ backgroundImage: SOLUTIONS_BG }}
-    >
-      <div className="flex w-full flex-col items-center justify-between gap-[40px] min-[1240px]:flex-row min-[1240px]:items-stretch min-[1240px]:gap-0">
-        {/* Left copy column */}
-        <div className="flex w-full flex-col items-start justify-between gap-[32px] min-[1240px]:h-[581px] min-[1240px]:w-[420px] min-[1240px]:gap-0">
-          {/* Hidden top tab-slider — kept (opacity-0) to preserve the column's spacing */}
-          <div className="hidden items-center gap-[16px] opacity-0 min-[1240px]:flex">
-            <div className="flex size-[24px] items-center justify-center">
-              <img
-                src={`${IMG}/expand-more-1.svg`}
-                alt=""
-                className="size-[24px] rotate-90"
-              />
-            </div>
-            <div className="flex items-end justify-center gap-[8px]">
-              <div className="h-[8px] w-[40px] rounded-[50px] bg-blue" />
-              <div className="h-[8px] w-[24px] rounded-[50px] border border-[#767e84] bg-white" />
-            </div>
-            <div className="flex size-[24px] items-center justify-center">
-              <img
-                src={`${IMG}/expand-more-2.svg`}
-                alt=""
-                className="size-[24px] -rotate-90"
-              />
-            </div>
-          </div>
-
-          {/* Description */}
-          <div className="flex w-full flex-col items-start gap-[32px] text-white">
-            <div className="w-full">
-              <p className="whitespace-nowrap text-[44px] font-normal leading-[1.2] max-md:text-[28px]">
-                Operational Excellence
-              </p>
-              <p className="text-[44px] font-bold leading-[1.2] text-gold max-md:text-[28px]">
-                Our digital twin
-              </p>
-            </div>
-            <p className="w-full font-inter text-body font-normal leading-[1.3]">
-              Deploy a comprehensive digital replica of your high-performing
-              operational workflows to automate multi-step execution, reduce
-              human error, and scale team capability.
-            </p>
-          </div>
-
-          {/* Carousel controls */}
-          <button
-            type="button"
-            aria-label="Browse solutions"
-            className="flex items-center gap-[16px]"
-          >
-            <img
-              src={`${IMG}/expand-more-3.svg`}
-              alt=""
-              className="size-[32px] rotate-90 transition hover:brightness-110"
-            />
-            <img
-              src={`${IMG}/carousel-dots.svg`}
-              alt=""
-              className="h-[16px] w-[118.313px]"
-            />
-            <img
-              src={`${IMG}/expand-more-4.svg`}
-              alt=""
-              className="size-[32px] -rotate-90 transition hover:brightness-110"
-            />
-          </button>
-        </div>
-
-        {/* Right image (Figma node 123:1581 — image FILL the MCP would not export). */}
-        <div
-          className="relative h-[420px] w-full shrink-0 overflow-hidden rounded-[8px] bg-[#0a1230] bg-cover bg-center min-[1240px]:h-[581px] min-[1240px]:w-[700px]"
-          style={{ backgroundImage: `url(${IMG}/control-room.png)` }}
-        >
-          {/* BG-CROP: control-room image fill could not be exported by Figma —
-              export it manually to /images/methodology/control-room.png. verify vs Figma */}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function TailoredSolutions() {
   return (
     <div className="relative flex w-full flex-col items-start gap-[60px]">
@@ -345,7 +258,7 @@ function TailoredSolutions() {
           <p className="font-bold leading-[1.2]">Built for Scale</p>
         </div>
       </div>
-      <SolutionsContent />
+      <SolutionsCarousel />
     </div>
   );
 }
