@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/*
+  TWINCO design tokens — extracted from Figma node 123:249 (Tailwind v4, CSS-first).
+  Values are pulled from the node, not guessed. Extended per-section as new
+  values surface during the section-by-section build.
+*/
+
+@theme {
+  /* ---- Fonts (backed by next/font/local vars set on <html>) ---- */
+  --font-afacad: var(--nf-afacad);
+  --font-inter: var(--nf-inter);
+  --font-sans: var(--nf-afacad); /* Afacad is the primary/default font */
+
+  /* ---- Color palette ---- */
+  --color-navy: #021b79; /* brand deep navy */
+  --color-blue: #147bfe; /* accent blue */
+  --color-cyan: #68e8ff; /* gradient cyan */
+  --color-sky: #96c4ff; /* card borders / light blue */
+  --color-steel: #3c90c5; /* button border */
+  --color-gold: #ffde8a; /* headline accent */
+  --color-cream: #fff7e1; /* gradient text — top */
+  --color-mist: #f4f9ff; /* gradient text — bottom */
+  --color-surface: #f8f9fc; /* light section background */
+  --color-ash: #656565; /* muted subtitle gray */
+  --color-silver: #d5d5d5; /* metric label gray */
+  --color-mute: #d7d7d7; /* inactive nav gray */
+  --color-ink: #00082d; /* deepest navy — footer & dark CTA sections */
+  --color-fog: #c7c7c7; /* light-gray subheading/detail on dark */
+  --color-jet: #050708; /* near-black heading/body on light */
+  --color-slate: #383838; /* Inter body gray on light */
+
+  /* ---- Type scale (from the node) ----
+     Big headings are fluid: they hit their exact design px at desktop (>=1280px)
+     and scale down smoothly on smaller screens. Small sizes stay fixed. */
+  --text-display: clamp(40px, 6.25vw, 80px); /* "WE SUCCEED." */
+  --text-hero: clamp(34px, 5.47vw, 70px); /* hero italic line */
+  --text-h1: clamp(30px, 4.7vw, 60px); /* section headings */
+  --text-metric: clamp(30px, 3.6vw, 46px); /* stat numbers */
+  --text-title: 24px; /* card titles / subheadings */
+  --text-button: 18px; /* button labels */
+  --text-body: 16px; /* nav, subtitles, metric labels */
+  --text-label: 14px; /* Inter small labels / fine print */
+
+  /* ---- Radii ---- */
+  --radius-card: 32px;
+  --radius-pill: 100px;
+}
+
+body {
+  font-family: var(--font-sans);
+  /* Safety net: decorative overflow (waves, glows) never causes horizontal page scroll. */
+  overflow-x: clip;
+}
+
+/* ---- Reusable effect utilities (not expressible as plain theme tokens) ---- */
+
+/* White glow on hero / section headings */
+@utility text-glow {
+  text-shadow: 6px 6px 16px rgba(255, 255, 255, 0.25);
+}
+
+/* Signature navy→cyan brand gradient (buttons). Angle overridable via --brand-angle. */
+@utility bg-brand-gradient {
+  background-image: linear-gradient(
+    var(--brand-angle, 115.721deg),
+    var(--color-navy) 8.8727%,
+    var(--color-cyan) 104.61%
+  );
+}
+
+/* ---- Motion (light, tasteful) ---- */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scroll reveal — the <Reveal> client wrapper adds `.is-in` when the element enters the viewport. */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Content crossfade (e.g. the use-case card when switching tabs). */
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out;
+}
+
+/* Card lift on hover. */
+@utility hover-lift {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-fade-in {
+    animation: none;
+  }
+}

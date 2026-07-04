@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "info-security",
+    "useCase": "Information Security & Compliance",
+    "title1": "Information Security",
+    "title2": "& Compliance",
+    "idealFor": "Chief Information Security Officers (CISOs) and organizations operating under strict regulatory frameworks.",
+    "challenge": "Security leaders drown in endless regulatory updates (ISO, NIST, DORA) and complex compliance logs, leaving little time to focus on defense strategy.",
+    "solution": "An intelligent system automatically ingests regulatory documents, conducts instant gap analysis against your current posture, and generates a simple, actionable weekly work plan.",
+    "impact": "Transforms compliance from a manual burden into a continuous, automated safeguard, ensuring full regulatory immunity while saving dozens of management hours each month.",
+    "image": "/images/inspiration/usecases/info-security.png"
+  },
+  {
+    "slug": "financial-reconciliation",
+    "useCase": "Financial Transaction Reconciliation",
+    "title1": "Financial Transaction",
+    "title2": "Reconciliation",
+    "idealFor": "Finance companies, digital wallets, and enterprises managing high volumes of daily transactions.",
+    "challenge": "Discrepancies cause money to fall through the cracks. Because human analysts only review data samples, structural loopholes remain open for financial losses and fraud.",
+    "solution": "A smart engine simultaneously ingests data from banks, payment gateways, and accounting systems, successfully matching transactions even across mismatched processing fees and currency fluctuations.",
+    "impact": "Automatically verifies 99.5% of valid transactions, flagging only the 0.5% that genuinely require human review. Saves 80% of processing time while achieving 100% transaction coverage with no lost revenue.",
+    "image": "/images/inspiration/usecases/financial-reconciliation.png"
+  },
+  {
+    "slug": "digital-retail",
+    "useCase": "Digital Retail & Beauty Industry",
+    "title1": "Digital Retail",
+    "title2": "& Beauty Industry",
+    "idealFor": "E-commerce platforms, retail chains, and cosmetics brands.",
+    "challenge": "Standard e-commerce websites feel \"cold.\" Customers browse hundreds of products, become overwhelmed by choice, and leave without making a purchase due to a lack of personalized, professional guidance.",
+    "solution": "The customer uploads a selfie; the system analyzes specific physical traits (like skin condition and tone), combines the data with a preference questionnaire, and generates a highly personalized product \"prescription\".",
+    "impact": "Transforms a generic digital storefront into a trusted, personalized consultation. Dramatically increases conversion rates and boosts average order value by eliminating purchase hesitation.",
+    "image": "/images/inspiration/usecases/digital-retail.png"
+  }
+]

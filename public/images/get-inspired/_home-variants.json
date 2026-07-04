@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "customer-service-twin",
+    "tab": "The Customer Service Twin",
+    "title1": "The Customer",
+    "title2": "Service Twin",
+    "challenge": "Representatives burn valuable time repeating identical scripts and workflows for routine inquiries.",
+    "solution": "Operates as a \"shadow agent\" that learns your exact service protocols and actual actions, autonomously resolving up to 80% of standard tickets using your brand's voice.",
+    "impact": "Redirects human empathy and judgment to where it matters most, handling complex, high-value customer interactions.",
+    "image": "/images/get-inspired/customer-service-twin.jpg"
+  },
+  {
+    "slug": "ciso-copilot",
+    "tab": "The CISO Copilot",
+    "title1": "The CISO",
+    "title2": "Copilot",
+    "challenge": "Security leaders are drowning in endless regulatory updates (ISO, NIST, DORA) and complex compliance logs, instead of focusing on security strategy.",
+    "solution": "utomatically process regulatory documents, conduct instant gap analysis against your systems, and generate simple, actionable work plans.",
+    "impact": "Transforms compliance from a manual burden into a continuous, automated safeguard, saving dozens of management hours monthly.",
+    "image": "/images/get-inspired/ciso-copilot.jpg"
+  }
+]

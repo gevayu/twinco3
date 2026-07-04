@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "data-entry",
+    "useCase": "Data Entry & Processing",
+    "title1": "Data Entry &",
+    "title2": "Processing",
+    "idealFor": "Finance departments, bookkeeping, and organizations processing high volumes of invoices.",
+    "challenge": "Employees receive invoices via email, manually open them, and type the data into the ERP system: a slow, repetitive, and highly error-prone process.",
+    "solution": "The system learns the workflow, automatically identifies the relevant fields across various documents, and seamlessly inputs the data directly into your target systems.",
+    "impact": "Delivers a 10x increase in processing speed with zero human error. Highly trained employees stop acting as typists and transition to managers who focus solely on reviewing anomalies and approving actions.",
+    "image": "/images/inspiration/usecases/data-entry.png"
+  },
+  {
+    "slug": "quality-assurance",
+    "useCase": "Quality Assurance (QA)",
+    "title1": "Quality",
+    "title2": "Assurance (QA)",
+    "idealFor": "Software development teams and technology companies.",
+    "challenge": "QA testers manually run fixed sequences of actions (clicks, form fills) to verify system stability, limiting testing capacity to standard working hours and human speed.",
+    "solution": "We build a \"live script\" that accurately mirrors human testing behavior, autonomously executing complex system checks and stress tests 24/7.",
+    "impact": "Achieves full, round-the-clock test coverage, catching bugs before they reach the end user. Human testers are freed to focus on complex, exploratory QA testing.",
+    "image": "/images/inspiration/usecases/quality-assurance.png"
+  },
+  {
+    "slug": "procurement",
+    "useCase": "Procurement Management",
+    "title1": "Procurement",
+    "title2": "Management",
+    "idealFor": "Procurement departments in medium to large organizations.",
+    "challenge": "Buyers spend days manually comparing prices across multiple supplier websites and consolidating offers into spreadsheets for managerial approval.",
+    "solution": "The system autonomously navigates target sites, extracts real-time pricing, and instantly generates a finalized comparison table ready for approval.",
+    "impact": "Condenses the procurement cycle from days to minutes, delivering significant cost savings while enabling managers to approve optimized deals with a single click.",
+    "image": "/images/inspiration/usecases/procurement.png"
+  }
+]

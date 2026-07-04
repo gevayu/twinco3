@@ -1,0 +1,37 @@
+[
+  {
+    "index": 1,
+    "title1": "Operational Excellence",
+    "title2": "Our digital twin",
+    "description": "Deploy a comprehensive digital replica of your high-performing operational workflows to automate multi-step execution, reduce human error, and scale team capability.",
+    "image": "/images/methodology/solutions/slide-1.png"
+  },
+  {
+    "index": 2,
+    "title1": "Finance & Revenue Protection,",
+    "title2": "Transaction Control",
+    "description": "Audit and monitor your financial data streams in real time to detect cross-platform anomalies, close process gaps, and block hidden revenue leakage.",
+    "image": "/images/methodology/solutions/slide-2.png"
+  },
+  {
+    "index": 3,
+    "title1": "Administration &",
+    "title2": "Workflows Automation",
+    "description": "Streamline repetitive administrative tasks, corporate knowledge management, and cross-departmental workflows to eliminate operational friction.",
+    "image": "/images/methodology/solutions/slide-3.png"
+  },
+  {
+    "index": 4,
+    "title1": "Supply Chain &",
+    "title2": "Logistics Optimization",
+    "description": "Integrate predictive AI infrastructure to synchronize inventory control, vendor tracking, and resource allocation with live market demand.",
+    "image": "/images/methodology/solutions/slide-4.png"
+  },
+  {
+    "index": 5,
+    "title1": "AI-IT Governance",
+    "title2": "& Security",
+    "description": "Secure your AI ecosystem with dedicated data privacy guardrails, rigorous regulatory compliance, and non-human identity (NHI) permission management.",
+    "image": "/images/methodology/solutions/slide-5.png"
+  }
+]

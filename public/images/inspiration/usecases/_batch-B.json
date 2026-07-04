@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "financial-reporting",
+    "useCase": "Financial Reporting & Analysis",
+    "title1": "Financial Reporting",
+    "title2": "& Analysis",
+    "idealFor": "Finance departments, analysts, and executives who rely on periodic reporting.",
+    "challenge": "Analysts spend dozens of hours each month manually collecting, cross-referencing, and compiling data from disparate systems such as BI, SAP, and Salesforce to build monthly reports.",
+    "solution": "The system replicates the human methodology for data collection and cross-referencing, autonomously generating complex reports just as your team does.",
+    "impact": "Reports are ready on the first day of the month without anyone touching them. This frees up dozens of hours for analysis and eliminates manual cross-referencing errors entirely.",
+    "image": "/images/inspiration/usecases/financial-reporting.png"
+  },
+  {
+    "slug": "employee-wellbeing",
+    "useCase": "Employee Wellbeing & Burnout Prevention",
+    "title1": "Employee Wellbeing",
+    "title2": "& Burnout Prevention",
+    "idealFor": "HR leaders, team managers, and organizations invested in employee well-being and retention.",
+    "challenge": "Identifying employee burnout, such as continuous work without breaks or late-night intensive typing, is notoriously difficult before performance drops or the employee leaves the company.",
+    "solution": "The system builds a baseline model of a healthy workday, detects abnormal behavioral patterns, and proactively alerts management when an employee needs a break.",
+    "impact": "Managers receive smart alerts before burnout causes operational damage, helping maintain high productivity over time while significantly reducing employee turnover.",
+    "image": "/images/inspiration/usecases/employee-wellbeing.png"
+  },
+  {
+    "slug": "internal-it",
+    "useCase": "Internal IT & Helpdesk",
+    "title1": "Internal IT",
+    "title2": "& Helpdesk",
+    "idealFor": "IT departments and internal technical support teams.",
+    "challenge": "IT professionals waste valuable time repeatedly resolving common issues, such as password resets, printer setups, and basic software installations, while AI-based threats are emerging.",
+    "solution": "When an employee encounters a technical issue, the system provides immediate, direct remediation on their computer, simulating a remote takeover by an IT technician. With Twin-Co's help, IT experts can focus on new threats.",
+    "impact": "Delivers instant resolution for routine tech issues, freeing the IT team to focus on strategic infrastructure and complex problem-solving.",
+    "image": "/images/inspiration/usecases/internal-it.png"
+  }
+]
