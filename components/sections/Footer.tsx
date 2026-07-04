@@ -77,6 +77,8 @@ export default function Footer() {
               </p>
             </div>
 
+            {/* Explore + Get in touch — kept side by side as two columns, incl. on mobile */}
+            <div className="flex items-start gap-[150px] max-lg:w-full max-lg:gap-[48px] max-sm:gap-[24px]">
             {/* Explore */}
             <div className="flex w-[119px] flex-col items-start gap-[16px] [word-break:break-word]">
               <p className="text-title font-semibold leading-[24px] text-gold">
@@ -122,6 +124,7 @@ export default function Footer() {
                   ),
                 )}
               </div>
+            </div>
             </div>
           </div>
 
