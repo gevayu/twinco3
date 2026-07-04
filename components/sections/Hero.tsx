@@ -12,12 +12,10 @@ export default function Hero() {
           zoom in and anchor to the right so the wave sweeps the center-right
           and the tagline area stays clear. */}
       <div
-        className="pointer-events-none absolute inset-0 overflow-hidden bg-navy"
+        className="pointer-events-none absolute inset-0 overflow-hidden bg-navy bg-[length:165%_auto] bg-[position:82%_30%] max-lg:bg-cover max-lg:bg-center"
         style={{
           backgroundImage: "url(/images/hero/hero-bg.png)",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "165% auto",
-          backgroundPosition: "82% 30%",
         }}
       />
 
