@@ -47,7 +47,7 @@ const variants: Variant[] = [
     challenge:
       "Security leaders are drowning in endless regulatory updates (ISO, NIST, DORA) and complex compliance logs, instead of focusing on security strategy.",
     solution:
-      "utomatically process regulatory documents, conduct instant gap analysis against your systems, and generate simple, actionable work plans.",
+      "Automatically process regulatory documents, conduct instant gap analysis against your systems, and generate simple, actionable work plans.",
     impact:
       "Transforms compliance from a manual burden into a continuous, automated safeguard, saving dozens of management hours monthly.",
     image: `${IMG}/ciso-copilot.jpg`,

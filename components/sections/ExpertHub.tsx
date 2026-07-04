@@ -33,8 +33,7 @@ const stepsA: Step[] = [
     n: "3",
     icon: "file-text.svg",
     titleLines: ["SOLUTION BLUEPRINT"],
-    // "nd" typo preserved verbatim from the Figma source.
-    desc: "We design the optimal solution nd implementation plan",
+    desc: "We design the optimal solution and implementation plan",
   },
 ];
 
@@ -50,8 +49,7 @@ const stepsB: Step[] = [
     n: "6",
     icon: "chart-bar.svg",
     titleLines: ["OUTCOME & VALUE"],
-    // "achive" typo preserved verbatim from the Figma source.
-    desc: "You achive measurable business impact",
+    desc: "You achieve measurable business impact",
   },
 ];
 
