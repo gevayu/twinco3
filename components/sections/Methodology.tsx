@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Fragment } from "react";
 import SolutionsCarousel from "./SolutionsCarousel";
+import ExpertHub from "./ExpertHub";
 
 const IMG = "/images/methodology";
 
@@ -87,7 +88,7 @@ function Caret() {
 function StepCard({ step }: { step: Step }) {
   return (
     <div
-      className="flex h-[400px] w-[302px] shrink-0 items-center overflow-hidden rounded-card p-[24px] max-sm:h-auto max-sm:w-full"
+      className="group flex h-[400px] w-[302px] shrink-0 items-center overflow-hidden rounded-card p-[24px] transition duration-300 will-change-transform hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0px_14px_34px_0px_rgba(20,123,254,0.28)] max-sm:h-auto max-sm:w-full"
       style={{ backgroundImage: STEP_BG }}
     >
       <div className="flex h-full min-w-px flex-1 flex-col items-start justify-between">
@@ -99,7 +100,7 @@ function StepCard({ step }: { step: Step }) {
             <img
               src={`${IMG}/${step.icon}`}
               alt=""
-              className="size-[60px] shrink-0"
+              className="size-[60px] shrink-0 transition-transform duration-300 group-hover:scale-110"
             />
             <p className="w-[222px] text-center text-title font-medium leading-[1.2] text-white">
               {step.titleLines.map((ln, i) => (
@@ -154,12 +155,16 @@ function MethodologyIntro() {
 function BenefitCard({ b }: { b: Benefit }) {
   return (
     <div
-      className="relative flex min-w-px flex-1 flex-col items-start overflow-hidden rounded-[8px] p-[24px]"
+      className="group relative flex min-w-px flex-1 flex-col items-start overflow-hidden rounded-[8px] p-[24px] transition duration-300 will-change-transform hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0px_14px_34px_0px_rgba(20,123,254,0.28)]"
       style={{ backgroundImage: BENEFIT_BG }}
     >
       <div className="flex w-full flex-col items-start gap-[24px]">
         <div className="flex w-full flex-col items-start gap-[16px]">
-          <img src={`${IMG}/${b.icon}`} alt="" className="size-[40px] shrink-0" />
+          <img
+            src={`${IMG}/${b.icon}`}
+            alt=""
+            className="size-[40px] shrink-0 transition-transform duration-300 group-hover:scale-110"
+          />
           <p className="w-full text-[36px] font-semibold leading-none text-white max-md:text-[28px]">
             {b.titleLines.map((ln, i) => (
               <span key={i} className="block">
@@ -248,7 +253,21 @@ function TwincoEdge() {
 
 function TailoredSolutions() {
   return (
-    <div className="relative flex w-full flex-col items-start gap-[60px]">
+    <div className="relative isolate flex w-full flex-col items-start gap-[60px]">
+      {/* Decorative ChatGPT swirl — bound to this block so it stays behind Tailored Solutions
+          no matter what sits above it (Figma node 123:338). */}
+      <div className="pointer-events-none absolute left-[326px] top-[250px] -z-10 flex h-[1390.394px] w-[1434.231px] items-center justify-center max-lg:hidden">
+        <div className="flex-none rotate-[138.18deg]">
+          <div className="relative h-[720.383px] w-[1280px]">
+            <img
+              src={`${IMG}/chatgpt-bg.png`}
+              alt=""
+              className="absolute inset-0 size-full max-w-none object-cover"
+            />
+            <div aria-hidden className="absolute inset-0 bg-black/20" />
+          </div>
+        </div>
+      </div>
       <div className="flex w-full flex-col items-center gap-[16px] text-center">
         <p className="w-full text-h1 font-bold leading-none text-gold">
           Tailored Solutions
@@ -266,24 +285,13 @@ function TailoredSolutions() {
 export default function Methodology() {
   return (
     <section className="relative w-full overflow-hidden bg-ink">
-      <div className="relative mx-auto w-full max-w-[1440px] overflow-hidden">
+      {/* Content is capped at 1440, but the decorative swirls bleed full-width (clipped only by the
+          section) so the background keeps expanding on wider screens instead of stopping at 1440. */}
+      <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Decorative ChatGPT swirl backgrounds (Figma nodes 123:339 / 123:338) */}
         <div className="pointer-events-none absolute left-[-959px] top-[-337px] flex h-[1314.009px] w-[1643.14px] items-center justify-center">
           <div className="flex-none rotate-[-23.3deg]">
             <div className="relative h-[810.431px] w-[1440px]">
-              {/* BG-CROP: verify vs Figma */}
-              <img
-                src={`${IMG}/chatgpt-bg.png`}
-                alt=""
-                className="absolute inset-0 size-full max-w-none object-cover"
-              />
-              <div aria-hidden className="absolute inset-0 bg-black/20" />
-            </div>
-          </div>
-        </div>
-        <div className="pointer-events-none absolute left-[406px] top-[2189px] flex h-[1390.394px] w-[1434.231px] items-center justify-center">
-          <div className="flex-none rotate-[138.18deg]">
-            <div className="relative h-[720.383px] w-[1280px]">
               {/* BG-CROP: verify vs Figma */}
               <img
                 src={`${IMG}/chatgpt-bg.png`}
@@ -299,6 +307,7 @@ export default function Methodology() {
         <div className="relative flex flex-col gap-[160px] px-[80px] py-[100px] max-md:px-[24px] max-sm:px-[16px] max-md:py-[48px] max-md:gap-[80px]">
           <MethodologyIntro />
           <TwincoEdge />
+          <ExpertHub />
           <TailoredSolutions />
         </div>
       </div>

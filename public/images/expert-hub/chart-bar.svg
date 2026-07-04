@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ChartBar">
+<g id="Vector">
+</g>
+<path id="Vector_2" d="M9.375 40.625V26.5625H18.75" stroke="var(--stroke-0, #388FFF)" stroke-width="2.34375" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M43.75 40.625H6.25" stroke="var(--stroke-0, #388FFF)" stroke-width="2.34375" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M18.75 40.625V17.1875H29.6875" stroke="var(--stroke-0, #388FFF)" stroke-width="2.34375" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M29.6875 40.625V7.8125H40.625V40.625" stroke="var(--stroke-0, #388FFF)" stroke-width="2.34375" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

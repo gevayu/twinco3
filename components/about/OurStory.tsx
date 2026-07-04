@@ -7,7 +7,7 @@
 export default function OurStory() {
   return (
     <section className="w-full bg-surface px-[80px] py-[100px] max-md:px-[24px] max-md:py-[48px]">
-      <div className="mx-auto flex w-[1280px] max-w-full flex-col items-start gap-[50px] rounded-card bg-white p-[24px] drop-shadow-[0px_8px_6px_rgba(0,0,0,0.1)]">
+      <div className="group mx-auto flex w-[1280px] max-w-full flex-col items-start gap-[50px] rounded-card bg-white p-[24px] drop-shadow-[0px_8px_6px_rgba(0,0,0,0.1)] transition-[transform,filter] duration-300 will-change-transform hover:-translate-y-[4px] hover:drop-shadow-[0px_18px_20px_rgba(0,0,0,0.15)]">
         {/* Heading */}
         <div className="text-glow flex w-full flex-col items-center text-center">
           <p className="text-h1 font-bold leading-none text-blue">Our story starts</p>
@@ -54,7 +54,7 @@ export default function OurStory() {
             <img
               src="/images/about/story/story-ribbon.png"
               alt=""
-              className="size-full max-w-none object-cover"
+              className="size-full max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         </div>

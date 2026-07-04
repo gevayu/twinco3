@@ -79,12 +79,12 @@ function Block({ label, body }: { label: string; body: string }) {
 
 function StageCard({ s }: { s: Stage }) {
   return (
-    <div className="relative flex h-[700px] w-[1280px] max-w-full shrink-0 flex-col items-start justify-center overflow-hidden rounded-card max-md:h-auto max-md:min-h-[700px]">
+    <div className="group relative flex h-[700px] w-[1280px] max-w-full shrink-0 flex-col items-start justify-center overflow-hidden rounded-card transition-[transform,box-shadow] duration-500 will-change-transform hover:-translate-y-[4px] hover:shadow-[0px_24px_50px_rgba(0,0,0,0.3)] max-md:h-auto max-md:min-h-[700px]">
       {/* Full-bleed background photo */}
       <img
         src={s.image}
         alt=""
-        className="pointer-events-none absolute inset-0 size-full max-w-none rounded-card object-cover"
+        className="pointer-events-none absolute inset-0 size-full max-w-none rounded-card object-cover transition-transform duration-700 group-hover:scale-105"
       />
       {/* Content with the left dark scrim over the image */}
       <div
@@ -129,8 +129,8 @@ export default function MethodologyStages() {
   return (
     <section className="relative w-full overflow-hidden bg-surface">
       <div className="relative mx-auto w-full max-w-[1440px] p-[80px] max-md:p-[24px]">
-        {/* Decorative translucent 3D ribbon-wave, full-width at the top */}
-        <div className="pointer-events-none absolute left-0 top-[1px] h-[731px] w-[1440px] max-w-full overflow-hidden">
+        {/* Decorative translucent 3D ribbon-wave — full-bleed so it fills any screen width. */}
+        <div className="pointer-events-none absolute left-1/2 top-[1px] h-[731px] w-screen -translate-x-1/2 overflow-hidden">
           <img
             src={`${IMG}/ribbon.png`}
             alt=""

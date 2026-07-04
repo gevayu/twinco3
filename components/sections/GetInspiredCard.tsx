@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useAutoRotate } from "@/components/ui/useAutoRotate";
 
 const IMG = "/images/get-inspired";
 
@@ -14,7 +14,7 @@ type Variant = {
   image: string;
 };
 
-/* The 3 home "Get Inspired" tab variants (Figma node 123:1476). */
+/* The 5 home "Get Inspired" tab variants (Figma nodes 123:1476 + 175:2264). */
 const variants: Variant[] = [
   {
     tab: "The Financial Analyst Twin",
@@ -52,14 +52,41 @@ const variants: Variant[] = [
       "Transforms compliance from a manual burden into a continuous, automated safeguard, saving dozens of management hours monthly.",
     image: `${IMG}/ciso-copilot.jpg`,
   },
+  {
+    tab: "The Transaction Reconciliation Engine",
+    title1: "The Transaction",
+    title2: "Reconciliation Engine",
+    challenge:
+      "Discrepancies among banks, payment gateways, and accounting systems cause money to fall through the cracks, creating structural loopholes that result in financial losses.",
+    solution:
+      "A smart engine ingests and matches transaction data across all systems, bridging mismatched processing fees, currency fluctuations, time-sensitive transactions, and more.",
+    impact:
+      "Automatically verifies 99.5% of valid transactions, flagging only the 0.5% that require human review, achieving 100% coverage with zero lost revenue.",
+    image: `${IMG}/transaction-reconciliation.jpg`,
+  },
+  {
+    tab: "The Data Entry Twin",
+    title1: "The Data",
+    title2: "Entry Twin",
+    challenge:
+      "Finance departments process high volumes of invoices daily by manually opening emails and entering data into the ERP, a slow, repetitive, and highly error-prone workflow.",
+    solution:
+      "Automatically identifies the relevant fields across various incoming documents and seamlessly inputs the data directly into your target systems.",
+    impact:
+      "Delivers a 10x increase in processing speed with zero human error, allowing employees to transition from typists to managers who review and approve work.",
+    image: `${IMG}/data-entry-twin.jpg`,
+  },
 ];
 
 export default function GetInspiredCard() {
-  const [active, setActive] = useState(0);
+  const { index: active, setIndex: setActive, hoverProps } = useAutoRotate(
+    variants.length,
+  );
   const v = variants[active];
 
   return (
     <div
+      {...hoverProps}
       className="relative z-10 flex w-[1024px] max-w-full flex-col items-center gap-[40px] overflow-hidden rounded-card p-[24px] shadow-[0px_8px_20px_0px_rgba(0,0,0,0.3)]"
       style={{
         backgroundImage:

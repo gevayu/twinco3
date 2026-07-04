@@ -15,7 +15,7 @@ export default function ClientPerspectives() {
 
           {/* Testimonial card (123:441) — sky gradient fill (Figma "Sky Gradient" returned empty; stops eyeballed from screenshot) */}
           <div
-            className="flex h-[500px] w-[1280px] max-w-full flex-col items-start justify-center overflow-hidden rounded-card border-[10px] border-solid border-white p-[32px] bg-[linear-gradient(180deg,#96c4ff_0%,#dcebfc_100%)] max-lg:h-auto max-lg:w-full"
+            className="flex h-[500px] w-[1280px] max-w-full flex-col items-start justify-center overflow-hidden rounded-card border-[10px] border-solid border-white p-[32px] bg-[linear-gradient(180deg,#96c4ff_0%,#dcebfc_100%)] transition-[transform,box-shadow] duration-300 will-change-transform hover:-translate-y-[4px] hover:shadow-[0px_20px_44px_rgba(2,27,121,0.18)] max-lg:h-auto max-lg:w-full"
           >
             {/* Testimonial container (123:442) */}
             <div className="flex w-[760px] max-w-full flex-col items-start gap-[68px] max-lg:w-full">

@@ -6,14 +6,18 @@ const exploreLinks = [
   "Client Perspectives",
 ];
 
-const contactLinks = [
-  "Book a session",
-  "Request an assessment",
-  "Contact",
-  "hello@twinco.ai",
+const contactLinks: { label: string; href?: string; book?: boolean }[] = [
+  { label: "Book a session", book: true },
+  { label: "Request an assessment", book: true },
+  { label: "Contact", book: true },
+  { label: "hello@twinco.ai", href: "mailto:hello@twinco.ai" },
 ];
 
-const legalLinks = ["Privacy Policy", "Terms of Service", "Accessibility"];
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "Accessibility", href: "/accessibility" },
+];
 
 /** Twinco "Slogan" wordmark — 6 vector parts exported from Figma (node 123:494), positioned exactly. */
 function Slogan() {
@@ -97,15 +101,26 @@ export default function Footer() {
                 Get in touch
               </p>
               <div className="flex flex-col items-start gap-[16px] text-body font-normal leading-[24px] text-white">
-                {contactLinks.map((label) => (
-                  <a
-                    key={label}
-                    href="#"
-                    className="whitespace-nowrap transition-opacity hover:opacity-80"
-                  >
-                    {label}
-                  </a>
-                ))}
+                {contactLinks.map((item) =>
+                  item.book ? (
+                    <button
+                      key={item.label}
+                      type="button"
+                      data-book-cta
+                      className="cursor-pointer whitespace-nowrap text-left transition-opacity hover:opacity-80"
+                    >
+                      {item.label}
+                    </button>
+                  ) : (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      className="whitespace-nowrap transition-opacity hover:opacity-80"
+                    >
+                      {item.label}
+                    </a>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -117,18 +132,18 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-[12px] text-label font-normal leading-[20px]">
-              {legalLinks.map((label, i) => (
-                <div key={label} className="flex items-center gap-[12px]">
+              {legalLinks.map((item, i) => (
+                <div key={item.label} className="flex items-center gap-[12px]">
                   {i > 0 && (
                     <span className="text-white/25" aria-hidden>
                       |
                     </span>
                   )}
                   <a
-                    href="#"
+                    href={item.href}
                     className="whitespace-nowrap text-white/55 transition-colors hover:text-white"
                   >
-                    {label}
+                    {item.label}
                   </a>
                 </div>
               ))}

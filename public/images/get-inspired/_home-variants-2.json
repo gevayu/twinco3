@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "transaction-reconciliation",
+    "tab": "The Transaction Reconciliation Engine",
+    "title1": "The Transaction",
+    "title2": "Reconciliation Engine",
+    "challenge": "Discrepancies among banks, payment gateways, and accounting systems cause money to fall through the cracks, creating structural loopholes that result in financial losses.",
+    "solution": "A smart engine ingests and matches transaction data across all systems, bridging mismatched processing fees, currency fluctuations, time-sensitive transactions, and more.",
+    "impact": "Automatically verifies 99.5% of valid transactions, flagging only the 0.5% that require human review, achieving 100% coverage with zero lost revenue.",
+    "image": "/images/get-inspired/transaction-reconciliation.jpg"
+  },
+  {
+    "slug": "data-entry-twin",
+    "tab": "The Data Entry Twin",
+    "title1": "The Data",
+    "title2": "Entry Twin",
+    "challenge": "Finance departments process high volumes of invoices daily by manually opening emails and entering data into the ERP, a slow, repetitive, and highly error-prone workflow.",
+    "solution": "Automatically identifies the relevant fields across various incoming documents and seamlessly inputs the data directly into your target systems.",
+    "impact": "Delivers a 10x increase in processing speed with zero human error, allowing employees to transition from typists to managers who review and approve work.",
+    "image": "/images/get-inspired/data-entry-twin.jpg"
+  }
+]

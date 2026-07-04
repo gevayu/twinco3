@@ -1,13 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 const IMG = "/images/inspiration/hero";
 
-const navLinks = [
-  { label: "Home", href: "/", active: false },
-  { label: "Our Methodology", href: "/methodology", active: false },
-  { label: "About Us", href: "/about", active: false },
-  { label: "Get Inspired", href: "/inspiration", active: true },
-];
-
 function GlowEllipse({
   src,
   className,
@@ -43,40 +36,8 @@ export default function InspirationHero() {
   return (
     <section className="relative w-full overflow-hidden bg-ink">
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-start">
-        {/* Navigation Bar */}
-        <nav className="flex w-full items-center justify-between px-[80px] py-[40px] max-md:px-[24px] max-sm:flex-wrap max-sm:justify-center max-sm:gap-[16px]">
-          <a href="/" className="relative block h-[30px] w-[149.571px] shrink-0">
-            <img
-              src={`${IMG}/logo.svg`}
-              alt="TWINCO"
-              className="absolute inset-0 block size-full max-w-none"
-            />
-          </a>
-          <div className="flex flex-wrap items-start gap-x-[24px] gap-y-0 text-body leading-none [word-break:break-word]">
-            {navLinks.map((l) => (
-              <a
-                key={l.label}
-                href={l.href}
-                className={
-                  l.active
-                    ? "font-bold text-white transition-colors"
-                    : "font-medium text-mute transition-colors hover:text-white"
-                }
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
-          <a
-            href="#"
-            className="bg-brand-gradient flex h-[40px] w-[180px] items-center justify-center rounded-pill border border-solid border-steel px-[24px] py-[10px] text-button font-semibold text-white transition hover:brightness-110"
-          >
-            Book a session
-          </a>
-        </nav>
-
-        {/* Hero Body */}
-        <div className="relative flex w-full items-center justify-center gap-[87px] px-[80px] pb-[90px] pt-[60px] max-lg:flex-col max-lg:items-center max-lg:text-center max-lg:gap-[32px] max-md:px-[24px] max-md:py-[48px]">
+        {/* Nav now lives in the global sticky <SiteHeader>; top padding clears the fixed header. */}
+        <div className="relative flex w-full items-center justify-center gap-[87px] px-[80px] pb-[90px] pt-[140px] max-lg:flex-col max-lg:items-center max-lg:text-center max-lg:gap-[32px] max-md:px-[24px] max-md:py-[48px] max-md:pt-[112px]">
           <GlowEllipse
             src={`${IMG}/ellipse-1166.svg`}
             className="left-[759px] top-[-63px]"

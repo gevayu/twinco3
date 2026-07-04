@@ -67,8 +67,8 @@ export default function Leadership() {
   return (
     <section className="relative w-full overflow-hidden bg-surface">
       <div className="relative mx-auto w-full max-w-[1440px] p-[80px] max-md:p-[24px]">
-        {/* Translucent 3D ribbon-wave behind the cards */}
-        <div className="pointer-events-none absolute left-0 top-[491px] h-[731px] w-[1440px] max-w-full overflow-hidden">
+        {/* Translucent 3D ribbon-wave behind the cards — full-bleed so it fills any screen width. */}
+        <div className="pointer-events-none absolute left-1/2 top-[491px] h-[731px] w-screen -translate-x-1/2 overflow-hidden max-md:top-[380px]">
           <img
             src="/images/methodology-page/stages/ribbon.png"
             alt=""

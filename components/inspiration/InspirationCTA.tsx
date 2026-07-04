@@ -57,6 +57,7 @@ export default function InspirationCTA() {
           {/* Button */}
           <a
             href="#"
+            data-book-cta
             className="bg-brand-gradient flex h-[40px] items-center justify-center gap-[10px] rounded-pill border border-solid border-steel py-[10px] pl-[24px] pr-[22px] text-button font-semibold text-white transition hover:brightness-110"
             style={{ ["--brand-angle" as string]: "126.845deg" }}
           >

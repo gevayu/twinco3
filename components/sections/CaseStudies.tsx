@@ -4,7 +4,7 @@ export default function CaseStudies() {
       {/* Content, capped at the 1440 desktop frame */}
       <div className="mx-auto w-full max-w-[1440px] px-[80px] py-[100px] max-md:px-[24px] max-md:py-[48px] max-sm:px-[16px]">
         {/* White case-studies card */}
-        <div className="flex w-full flex-col items-start gap-[50px] rounded-card bg-white p-[24px] drop-shadow-[0px_8px_6px_rgba(0,0,0,0.1)]">
+        <div className="flex w-full flex-col items-start gap-[50px] rounded-card bg-white p-[24px] drop-shadow-[0px_8px_6px_rgba(0,0,0,0.1)] transition-[transform,filter] duration-300 will-change-transform hover:-translate-y-[4px] hover:drop-shadow-[0px_18px_20px_rgba(0,0,0,0.15)]">
           {/* Header */}
           <div className="flex w-full flex-col items-center">
             <div className="text-glow w-full text-center leading-none text-navy [word-break:break-word]">

@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useAutoRotate } from "@/components/ui/useAutoRotate";
 import { useCases } from "./useCases";
 
 const SHARED = "/images/inspiration/shared";
@@ -18,11 +18,14 @@ function Label({ children }: { children: React.ReactNode }) {
 }
 
 export default function UseCaseExplorer() {
-  const [active, setActive] = useState(0);
+  const { index: active, setIndex: setActive, hoverProps } = useAutoRotate(
+    useCases.length,
+  );
   const uc = useCases[active];
 
   return (
     <div
+      {...hoverProps}
       className="flex h-[825px] w-[1100px] max-w-full items-start gap-[16px] overflow-clip rounded-card p-[16px] max-lg:flex-col max-lg:h-auto"
       style={{ backgroundImage: CARD_BG }}
     >

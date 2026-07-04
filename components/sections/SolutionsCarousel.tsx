@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useAutoRotate } from "@/components/ui/useAutoRotate";
 
 const IMG = "/images/methodology";
 const SOLUTIONS_BG =
@@ -53,12 +53,13 @@ const slides: Slide[] = [
 ];
 
 export default function SolutionsCarousel() {
-  const [i, setI] = useState(0);
+  const { index: i, setIndex: setI, hoverProps } = useAutoRotate(slides.length);
   const s = slides[i];
   const go = (n: number) => setI((prev) => (prev + n + slides.length) % slides.length);
 
   return (
     <div
+      {...hoverProps}
       className="flex w-full flex-col items-start overflow-hidden rounded-card p-[24px]"
       style={{ backgroundImage: SOLUTIONS_BG }}
     >

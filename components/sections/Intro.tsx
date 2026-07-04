@@ -133,7 +133,7 @@ export default function Intro() {
           {/* Comparison cards */}
           <div className="flex flex-wrap items-center justify-center gap-[24px]">
             {/* Software Installation card */}
-            <div className="flex w-[420px] max-w-full shrink-0 flex-col items-center gap-[16px] overflow-hidden rounded-card border-[3px] border-solid border-sky bg-white p-[24px] max-lg:w-full">
+            <div className="flex w-[420px] max-w-full shrink-0 flex-col items-center gap-[16px] overflow-hidden rounded-card border-[3px] border-solid border-sky bg-white p-[24px] transition duration-300 will-change-transform hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0px_16px_36px_rgba(2,27,121,0.15)] max-lg:w-full">
               <div className="flex w-full items-start gap-[8px]">
                 <XCircle32 />
                 <div className="flex w-[253px] flex-col items-start gap-[4px] leading-[1.3] [word-break:break-word]">
@@ -182,7 +182,7 @@ export default function Intro() {
                 </div>
               </div>
 
-              <div className="absolute left-0 top-0 flex w-[420px] flex-col items-center gap-[16px] overflow-hidden rounded-card border-[3px] border-solid border-sky bg-white p-[24px] max-lg:static max-lg:w-full max-w-full">
+              <div className="absolute left-0 top-0 flex w-[420px] flex-col items-center gap-[16px] overflow-hidden rounded-card border-[3px] border-solid border-sky bg-white p-[24px] transition duration-300 will-change-transform hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0px_16px_36px_rgba(2,27,121,0.15)] max-lg:static max-lg:w-full max-w-full">
                 <div className="flex w-full items-start gap-[8px]">
                   <CheckCircle32 />
                   <div className="flex w-[253px] flex-col items-start gap-[4px] leading-[1.3] [word-break:break-word]">
