@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 const IMG = "/images/methodology-page/stages";
 
-/* Left-anchored dark scrim over each card image (verbatim from Figma). */
+/* Left-anchored scrim over each card image — a deep, gradual fade to the darkest navy (#00082d). */
 const CARD_OVERLAY =
-  "linear-gradient(-89.89518701494524deg, rgba(0,0,0,0) 32.319%, rgb(0,0,0) 81.99%)";
+  "linear-gradient(-89.89518701494524deg, rgba(0,8,45,0) 6%, rgba(0,8,45,0.5) 40%, rgba(0,8,45,0.88) 66%, rgb(0,8,45) 88%)";
 
 type Stage = {
   n: number;

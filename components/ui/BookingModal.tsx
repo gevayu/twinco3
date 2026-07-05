@@ -205,24 +205,28 @@ export default function BookingModal() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-ink/70 p-[16px] backdrop-blur-md transition-opacity duration-300 ease-out max-sm:p-0 ${
+      className={`fixed inset-0 z-[100] overflow-y-auto bg-ink/70 backdrop-blur-md transition-opacity duration-300 ease-out ${
         visible ? "opacity-100" : "opacity-0"
       }`}
       role="dialog"
       aria-modal="true"
       aria-label="Book a session"
-      onMouseDown={(e) => {
-        if (e.target === e.currentTarget) setOpen(false);
-      }}
       onTransitionEnd={(e) => {
         if (e.target === e.currentTarget && !open) setMounted(false);
       }}
     >
+      {/* min-h-full wrapper centers the content-sized panel, yet still scrolls when it's taller than the screen. */}
       <div
-        className={`relative my-[40px] w-full max-w-[460px] rounded-card bg-white p-[24px] shadow-[0px_30px_80px_0px_rgba(0,8,45,0.45)] transition-all duration-300 ease-out max-sm:my-0 max-sm:min-h-full max-sm:rounded-none ${
-          visible ? "translate-y-0 scale-100 opacity-100" : "translate-y-[12px] scale-[0.97] opacity-0"
-        }`}
+        className="flex min-h-full items-center justify-center p-[16px] max-sm:p-[12px]"
+        onMouseDown={(e) => {
+          if (e.target === e.currentTarget) setOpen(false);
+        }}
       >
+        <div
+          className={`relative w-full max-w-[460px] rounded-card bg-white p-[24px] shadow-[0px_30px_80px_0px_rgba(0,8,45,0.45)] transition-all duration-300 ease-out ${
+            visible ? "translate-y-0 scale-100 opacity-100" : "translate-y-[12px] scale-[0.97] opacity-0"
+          }`}
+        >
         {/* Close */}
         <button
           type="button"
@@ -377,6 +381,7 @@ export default function BookingModal() {
             </button>
           </form>
         )}
+        </div>
       </div>
     </div>
   );
